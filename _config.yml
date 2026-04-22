@@ -1,3 +1,10 @@
-title : "나의 웹사이트"
-description : "인문데이터과학 수업에서 만든 개인 웹사이트"
+title: "박동은의 웹사이트"
+description: "인문학과 데이터과학의 만남"
 theme: minima
+
+author:
+  name: "박동은"
+  email: "alliepark@snu.ac.kr"
+
+header_pages:
+  - about.md
