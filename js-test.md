@@ -1,6 +1,6 @@
 ---
 layout: page
-tutle: "JavaScript 테스트"
+title: "JavaScript 테스트"
 ---
 
-<script src="/assets/js/freq.js"></script>
+<script src="/assets/js/hw10.js"></script>
