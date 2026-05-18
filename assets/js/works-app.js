@@ -25,6 +25,17 @@ fetch("/data/works.json")
         }
     });
 
+function analyze(work) {
+fetch(work.file)
+    .then(response => response.text())
+    .then(text => {
+        nowBox.textContent = `[${work.title}] 분석 결과`;
+        const counts = targets.map(t => countChar(text, t));
+        drawList(targets, counts);
+        drawTop(targets, counts);
+    });
+}
+    
 function drawList(targets, counts) {
     list.textContent = "";
     for (let i = 0; i < targets.length; i++) {
