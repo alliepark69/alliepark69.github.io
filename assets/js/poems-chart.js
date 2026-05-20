@@ -23,7 +23,25 @@ function drawChart(rows) {
         type: "bar",
         data: {
             labels: labels,
-            datasets: [{ label: "작품 편수", data: counts}],
+            datasets: [{ label: "작품 편수",
+            data: counts,
+            backgroundColor: [
+                "rgba(255, 99, 132, 0.6)", // 분홍
+                "rgba(54, 162, 235, 0.6)", // 파랑
+                "rgba(255, 206, 86, 0.6)", // 노랑
+                "rgba(75, 192, 192, 0.6)", // 청록
+                ],
+            }],
         },
+        options : { 
+            plugins: {
+                title : {display: true, text: "작가별 작품 편수"},
+                legend : {display : true}
+            },
+            scales: {
+                x : {title: {display : true, text : "작가"}},
+                y : {beginAtZero: true, title : {display: true, text: "편수"}},
+            }
+        }
     });
 }
